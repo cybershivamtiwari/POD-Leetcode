@@ -1,0 +1,13 @@
+bool checkPangram (string s) {
+        // your code here
+       map<char,int>mp;
+       for(int i = 0; i < s.size(); i++){
+          if(!(s[i] >= 'a' && s[i] <= 'z') && !(s[i] >= 'A' && s[i] <='Z'))
+          continue;
+          else
+            mp[tolower(s[i])]++;
+       }
+       if(mp.size() != 26)
+         return false;
+        return true;
+    }
